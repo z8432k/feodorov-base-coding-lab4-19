@@ -6,7 +6,7 @@ Data_t* newData(void) {
   return (Data_t *) malloc(sizeof(Data_t));
 }
 
-unsigned short packData(const Data_t *const data) {
+unsigned short packData(const Data_t *data) {
   unsigned short box = 0;
 
   box = data->channelNumber;
