@@ -1,28 +1,18 @@
-PACK = pack
-UNPACK = unpack
+PROGRAM = calc
 
 CFLAGS = -Wall -g -ansi -O0
-LDLIBS =
+LDLIBS = -lm
 
-default: bin/$(PACK) bin/$(UNPACK)
+default: bin/$(PROGRAM)
 
-bin/$(PACK): bin/$(PACK).o bin/error.o bin/data.o
+bin/$(PROGRAM): bin/$(PROGRAM).o bin/error.o
 	$(CC) $^ $(LDLIBS) -o $@
 
 bin/error.o: src/error.c
 	$(CC) $(CFLAGS) -o $@ -c $<
 
-bin/data.o: src/data.c
-	$(CC) $(CFLAGS) -o $@ -c $<
-
-bin/$(UNPACK): bin/$(UNPACK).o bin/error.o  bin/data.o
-	$(CC) $^ $(LDLIBS) -o $@
-
-bin/$(PACK).o: src/$(PACK).c
-	$(CC) $(CFLAGS) -o $@ -c $<
-
-bin/$(UNPACK).o: src/$(UNPACK).c
+bin/$(PROGRAM).o: src/$(PROGRAM).c
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 clean:
-	rm -fv bin/*.o bin/$(PACK) bin/$(UNPACK)
+	rm -fv bin/*.o bin/$(PROGRAM)
