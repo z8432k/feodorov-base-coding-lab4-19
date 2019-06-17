@@ -32,11 +32,22 @@ int main(void) {
   cout << "Input a:";
   inputValue(&a, genericInputErr);
 
+  if (a == 0) {
+    cerr << "Wrong value for a." << endl;
+    exit(EXIT_FAILURE);
+  }
+
   cout << "Input b:";
   inputValue(&b, genericInputErr);
 
   cout << "Input c:";
   inputValue(&c, genericInputErr);
+
+  if (c == 0) {
+    cerr << "Wrong vaue for c" << endl;
+    exit(EXIT_FAILURE);
+  }
+
 
   cout.width(11);
   cout.precision(3);
