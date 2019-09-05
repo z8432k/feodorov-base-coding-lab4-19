@@ -1,4 +1,5 @@
-# Основы программирования. Лабораторная работа №3
+# Основы программирования. Лабораторная работа №4
+[![Build Status](https://travis-ci.org/z8432k/feodorov-base-coding-lab4-19.svg?branch=master)](https://travis-ci.org/z8432k/feodorov-base-coding-lab4-19)
 
 ## Вычисление кусочной ф-ции
 
